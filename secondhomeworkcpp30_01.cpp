@@ -18,7 +18,7 @@ vector<string> generate_vector(int n, int lenght){
 
 long long hash_code(string s){
     const int k = 31, mod = 1e9+7;
-    long long h;
+    long long h = 0;
      for (char c : s) {
         int x = (int) (c - 'a' + 1);
         h = (h * k + x) % mod;
@@ -62,7 +62,7 @@ vector<long long> delete_duplicates_hash(vector<long long> s){
 
 int main() {
     vector<string> s;
-    s = generate_vector(10000, 3);
+    s = generate_vector(1000, 3);
     vector<long long> s2;
     for (string c: s){
         s2.push_back(hash_code(c));
